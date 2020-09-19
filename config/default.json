@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://notsonoobie:Rahul@123@jobportalapp.spqo6.mongodb.net/portal?retryWrites=true&w=majority",
+    "JWT_SECRET_KEY": "my-secret-key"
+}
