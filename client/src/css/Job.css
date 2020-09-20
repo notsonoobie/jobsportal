@@ -1,0 +1,60 @@
+.JobSearch{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100vw;
+    height: 10vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+form > *{
+    margin-right: 2rem;
+}
+.input-name{
+    font-family: 'Montserrat',
+    sans-serif;
+    width: 30vw;
+    height: 2.5rem;
+    outline: none;
+    padding: .5rem 1rem;
+    border: 1.5px solid rgb(32,35,42);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+    letter-spacing: 1.5px;
+}
+.input-name:focus{
+    border-radius: 3px 20px 3px 20px;
+}
+.select{
+    font-family: 'Montserrat',
+    sans-serif;
+    width: 13rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: .5rem 1rem;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.submit{
+        font-family: 'Montserrat',
+        sans-serif;
+    width: 6rem;
+    height: 2.5rem;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgba(0,0,0,.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.submit:focus{
+    border: 3px solid rgba(0, 0, 0, .3);
+}

@@ -1,0 +1,88 @@
+.Home{
+    min-height: 100vh;
+    background: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #24292e;
+    font-family: 'Montserrat', sans-serif;
+}
+.Home .Home-card{
+    background: rgba(255,255,255,0.7);
+    height: 60vh;
+    width: 60vw;
+    border-radius: 1rem;
+    box-shadow: -10px -10px 30px 4px rgba(0,0,0,0.1), 10px 10px 30px 4px rgba(45,78,255,0.15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.Home .Home-card .Home-card--header h1{
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+.Home .Home-card .Home-card--header p{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+}
+.Home .Home-card .Home-card--form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.Home .Home-card .Home-card--form input{
+    width: 30vw;
+    margin-bottom: 12px;
+    outline: none;
+    padding: .5rem 1rem .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color: #696969;
+}
+.Home .Home-card--button{
+    margin-top: 1rem;
+}
+.Home .Home-card--button button{
+    padding: .5rem;
+    width: 25%;
+    margin-right: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #696969;
+    outline: none;
+    border: 2px solid #696969;
+    border-radius: 7px;
+    font-size: .8rem;
+    overflow: hidden;
+}
+.Home .Home-card--button a{
+    text-decoration: none;
+    padding: .5rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    margin-right: 1rem;
+    background-color: rgba(255,255,255,.7);
+    color: #696969;
+    outline: none;
+    border: 2px solid #696969;
+    border-radius: 7px;
+    font-size: .8rem;
+    overflow: hidden;
+}
+.Home .Home-card--button button:focus {
+    border: 3px solid #696969;
+}
+.Home .Home-card--button a:focus {
+    border: 3px solid #696969;
+}
+.Home .Home-card--button button:hover {
+    cursor: pointer;
+}

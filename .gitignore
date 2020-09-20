@@ -1,4 +1,5 @@
-node_module# dependencies
+# dependencies
+node_module
 /node_modules
 /.pnp
 .pnp.js
@@ -22,4 +23,6 @@ yarn-error.log*
 
 # CLIENTS
 client/node_modules
-client/public/
+client/node_module
+client/build/
+client/coverage/

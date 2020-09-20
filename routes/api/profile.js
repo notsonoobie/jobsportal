@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const cors = require('cors')
 const auth = require('../../middleware/auth')
 const {
     check,
@@ -8,6 +9,7 @@ const {
 
 const User = require('../../models/User')
 const Profile = require('../../models/Profile')
+router.use(cors())
 
 // Route - GET api/profile/me
 // DESC  - GET OUR PROFILE DATA

@@ -1,10 +1,12 @@
 import React from 'react'
+import SetupForm from '../Layout/SetupForm'
 
-const Login = () => {
+const Login = (props) => {
+    const { history } = props
     return (
-        <div>
-            
-        </div>
+        <>
+            <SetupForm history={history} login={true} />
+        </>
     )
 }
 export default Login

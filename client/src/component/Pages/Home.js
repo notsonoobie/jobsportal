@@ -1,10 +1,13 @@
 import React from 'react'
+import SetupForm from '../Layout/SetupForm'
 
-const Home = () => {
+const Home = (props) => {
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <SetupForm {...props} register={true} />   
+        </>
     )
 }
+
+
 export default Home

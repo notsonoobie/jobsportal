@@ -1,0 +1,76 @@
+.Navbar{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100vw;
+    height: 10vh;
+    background-color: rgb(32,35,42);
+    color: rgb(255,255,255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.Navbar .Navbar-logo{
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+.Navbar a{
+    text-decoration: none;
+    color: #ffff;
+}
+.Navbar .Navbar-items .Navbar-ul{
+    font-weight: 300;
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    letter-spacing: .7px;
+    transition: all .5s;
+}
+.Navbar .Navbar-items .Navbar-li:not(:last-child){
+    margin-right: 2rem;
+}
+.Navbar .Navbar-items .Navbar-li{
+    padding: .7rem;
+}
+.Navbar .Navbar-items .Navbar-li:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+    color: rgb(32,35,42);
+    border-radius: 5px;
+}
+.Navbar .Navbar-items .Navbar-ul .li-link:hover a{
+    color: rgb(32,35,42);
+}
+
+.profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(240,240,240,0.3);
+    -webkit-backdrop-filter: saturate(1.8) blur(10px) !important;
+    backdrop-filter: saturate(1.8) blur(10px) !important;
+}
+.profile-details{
+    background-color: rgba(10,10,10,0.7);
+    width: 50vw;
+    height: 50vh;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(50%);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-details .details{
+    margin: .7rem;
+    font-size: 1.5rem;
+}
+.profile-details .details:first-child {
+    text-transform: uppercase;
+}
