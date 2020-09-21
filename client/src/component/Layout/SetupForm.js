@@ -31,7 +31,7 @@ class SetupForm extends Component {
         const body = JSON.stringify(user)
         if(this.props.register){
             try{
-                axios.post('http://localhost:5000/api/user', body, config).then(res => {
+                axios.post('/api/user', body, config).then(res => {
                     const token = res.data.token
                     window.localStorage.setItem('job-auth',token)
                     this.props.history.push('/jobs')
@@ -46,7 +46,7 @@ class SetupForm extends Component {
             }
         }else{
             try{
-                axios.post('http://localhost:5000/api/auth', body, config).then(res => {
+                axios.post('/api/auth', body, config).then(res => {
                     const token = res.data.token
                     window.localStorage.setItem('job-auth', token)
                     this.props.history.push('/jobs')

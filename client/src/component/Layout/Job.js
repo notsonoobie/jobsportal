@@ -28,7 +28,7 @@ class Job extends Component {
             }
         }
         const body = JSON.stringify(payload)
-        axios.post('http://localhost:5000/jobs/data', body, config).then(res => {
+        axios.post('/jobs/data', body, config).then(res => {
             this.setState({
                 listOfJobs: JSON.parse(res.data)
             })

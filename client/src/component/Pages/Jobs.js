@@ -29,7 +29,7 @@ class Jobs extends Component {
                     'x-auth-token': this.state.token
                 }
             }
-            axios.get('http://localhost:5000/api/auth', config).then(res => {
+            axios.get('/api/auth', config).then(res => {
                 this.setState({
                     name: res.data.name,
                     email: res.data.email

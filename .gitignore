@@ -10,6 +10,8 @@ node_module
 # production
 /build
 
+config/default.json
+
 # misc
 .DS_Store
 .env.local
@@ -24,5 +26,4 @@ yarn-error.log*
 # CLIENTS
 client/node_modules
 client/node_module
-client/build/
 client/coverage/
