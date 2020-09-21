@@ -86,3 +86,28 @@
 .Home .Home-card--button button:hover {
     cursor: pointer;
 }
+.Home .About-details{
+    font-family: 'Montserrat', sans-serif;
+}
+.Home .About-details h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    margin-bottom: 7px;
+    color: rgba(0,0,0,0.7);
+}
+.Home .About-details h4{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    color: #696969;
+}
+.Home .About-links a:not(:last-child){
+    margin-right: 1.5rem;
+}
+.Home .About-links img{
+    width: 1rem;
+    height: 1rem;
+}
