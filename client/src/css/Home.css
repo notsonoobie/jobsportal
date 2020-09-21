@@ -111,3 +111,10 @@
     width: 1rem;
     height: 1rem;
 }
+.Err-msg{
+    text-transform: uppercase;
+    color: red;
+    font-weight: 500;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}

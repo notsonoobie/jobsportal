@@ -7,7 +7,8 @@ class SetupForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-             
+            emailExists : false,
+            invalidCredentials: false
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -29,19 +30,42 @@ class SetupForm extends Component {
         }
         const body = JSON.stringify(user)
         if(this.props.register){
-            axios.post('http://localhost:5000/api/user', body, config).then(res => {
-                const token = res.data.token
-                window.localStorage.setItem('job-auth',token)
-                this.props.history.push('/jobs')
-            })
+            try{
+                axios.post('http://localhost:5000/api/user', body, config).then(res => {
+                    const token = res.data.token
+                    window.localStorage.setItem('job-auth',token)
+                    this.props.history.push('/jobs')
+                }).catch(err => {
+                    this.setState({
+                        emailExists : true
+                    })
+                    }
+                )
+            }catch(e){
+                window.alert("Some Error Occured")
+            }
         }else{
-            axios.post('http://localhost:5000/api/auth', body, config).then(res => {
-                const token = res.data.token
-                window.localStorage.setItem('job-auth', token)
-                this.props.history.push('/jobs')
-            })
+            try{
+                axios.post('http://localhost:5000/api/auth', body, config).then(res => {
+                    const token = res.data.token
+                    window.localStorage.setItem('job-auth', token)
+                    this.props.history.push('/jobs')
+                }).catch(e => {
+                    this.setState({
+                        invalidCredentials: true
+                    })
+                }
+                )
+            }catch(e){
+                window.alert("Some Error Occured")
+            }
         }
     }
+   componentDidMount() {
+        if(window.localStorage.getItem('job-auth')) {
+            this.props.history.push('/jobs')
+        }
+   }
     render() {
         return (
         <div className='Home'>
@@ -55,6 +79,12 @@ class SetupForm extends Component {
                         {this.props.register && <input type='text' name='name' id='name' placeholder='John Doe' />}
                         <input type='email' name='email' id='email' placeholder='John@host.ltd' />
                         <input type='password' name='password' id='password' placeholder='Password' />
+                        {
+                            this.props.register && this.state.emailExists && (<span className='Err-msg'>Email Already Exists</span>)
+                        }
+                        {
+                            this.props.login && this.state.invalidCredentials && (<span className='Err-msg'>Invalid Credentials</span>)
+                        }
                         <div className='Home-card--button'>
                             {this.props.register && <button type='submit'>Register</button>}
                             {this.props.login ? <button type='submit'>Login</button> : <Link to='/login'>Login</Link>}
